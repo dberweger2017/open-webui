@@ -176,7 +176,7 @@ Look at the [Local Development Guide](https://docs.openwebui.com/getting-started
 
 ### Troubleshooting
 
-Encountering connection issues? Our [Open WebUI Documentation](https://docs.openwebui.com/troubleshooting/) has got you covered. For further assistance and to join our vibrant community, visit the [Open WebUI Discord](https://discord.gg/5rJgQTnV4s).
+Encountering connection issues? Our [Open WebUI Documentation](https://docs.openwebui.com/troubleshooting/) has got you covered. For further assistance and to join our vibrant community, pvisit the [Open WebUI Discord](https://discord.gg/5rJgQTnV4s).
 
 #### Open WebUI: Server Connection Error
 

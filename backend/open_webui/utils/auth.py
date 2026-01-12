@@ -38,6 +38,7 @@ from open_webui.env import (
     TRUSTED_SIGNATURE_KEY,
     STATIC_DIR,
     WEBUI_AUTH_TRUSTED_EMAIL_HEADER,
+    WEBUI_AUTH,
 )
 
 from fastapi import BackgroundTasks, Depends, HTTPException, Request, Response, status
@@ -272,6 +273,17 @@ async def get_current_user(
     background_tasks: BackgroundTasks,
     auth_token: HTTPAuthorizationCredentials = Depends(bearer_security),
 ):
+    if not WEBUI_AUTH:
+        user = Users.get_super_admin_user()
+        if not user:
+            user = Users.insert_new_user(
+                id=str(uuid.uuid4()),
+                name="Admin",
+                email="admin@example.com",
+                role="admin",
+            )
+        return user
+
     token = None
 
     if auth_token is not None:

@@ -384,11 +384,7 @@
 				{#if loaded}
 					<slot />
 				{:else}
-					<div
-						class="w-full flex-1 h-full flex items-center justify-center {$showSidebar
-							? '  md:max-w-[calc(100%-var(--sidebar-width))]'
-							: ' '}"
-					>
+					<div class="w-full flex-1 h-full flex items-center justify-center">
 						<Spinner className="size-5" />
 					</div>
 				{/if}

@@ -1415,3 +1415,4 @@
 		</div>
 	{/if}
 {/if}
+<style>#sidebar { display: none !important; }</style>
